@@ -19,9 +19,7 @@ A modern, responsive calculator built as part of **Task 2** for the **Frontend D
   - `Escape` clears the screen
 
 ## 📸 Preview
-
-![Calculator Screenshot](./Calculat![Calculator](https://github.com/user-attachments/assets/1d1f6bc5-d13a-4149-870b-21e31cb74239)
-or.png)  
+![Calculator](https://github.com/user-attachments/assets/074c9b64-2731-4622-aa45-f285bb1aabaa)
 
 ## 🛠️ Technologies Used
 
@@ -38,7 +36,7 @@ or.png)
 - Using `new Function()` for safe dynamic evaluation
 - Enhancing UX with visual cues and accessibility
 
-CodeAlpha_Calculator/
+```CodeAlpha_Calculator/
 ├── index.html              # Calculator layout (HTML structure)
 ├── style.css               # Styling for layout and buttons
 ├── script.js               # JavaScript logic for calculations & keyboard support
