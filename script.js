@@ -53,10 +53,18 @@ document.addEventListener("DOMContentLoaded", () => {
   // ✅ Function to Calculate Result
   function calculateResult() {
     try {
-      screen.value = new Function(
-        "return " +
-          screen.value.replace(/÷/g, "/").replace(/×/g, "*").replace(/−/g, "-")
-      )();
+      // Handle percentage by converting the value before evaluation
+      let result = screen.value.replace(/÷/g, "/").replace(/×/g, "*").replace(/−/g, "-");
+
+      // If the input contains a percentage, handle it
+      if (result.includes("%")) {
+        result = result.replace(/(\d+)%/g, (match, p1) => {
+          return `(${p1} / 100)`; // Converts 20% to (20 / 100)
+        });
+      }
+
+      // Evaluate the expression
+      screen.value = new Function("return " + result)();
     } catch {
       screen.value = "Error";
     }
